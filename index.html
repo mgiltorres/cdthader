@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acceso Confirmado</title>
+</head>
+<body>
+    <h1>Acceso Confirmado</h1>
+    <p id="datos"></p>
+
+    <script>
+        // Obtener parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get('nombre');
+        const nombre = params.get('apellidos');
+        const id = params.get('id');
+        const estado = params.get('cuota');
+        const nombre = params.get('pagado');
+
+        // Mostrar los datos en la página
+        document.getElementById('datos').innerText = `
+            Nombre: ${nombre}
+            Apellidos: ${apellidos}
+            ID: ${id}
+            Cuota: ${cuota}
+            Pagado: ${pagado}
+        `;
+    </script>
+</body>
+</html>
